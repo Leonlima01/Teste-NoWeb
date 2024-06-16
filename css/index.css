@@ -1,0 +1,785 @@
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    --cor-escura: rgb(12, 12, 11);
+    --letras-fundo-escuro: rgb(77, 82, 100);
+    --letras-texto-claro: hsla(0, 0%, 0%, 0.4);
+    --letras-em-cards: hsla(0, 0%, 100%, 0.836);
+    font-size: 1em;
+}
+
+:root *{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    display:flex;
+    justify-content: center;
+}
+.main{
+    max-width:1200px;
+    min-width:1000px;
+    overflow: hidden;
+}
+
+.header{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+#MobileMenu{
+    display: none;
+}
+
+.botaoPadrao{
+    border-radius:25px;
+    padding:10px 15px;
+    background-color:transparent;
+    border:1px solid black;
+    cursor:pointer;
+    font-weight:bold;
+    user-select: none;
+}
+.botaoPadrao:hover{
+    cursor:pointer;
+}
+.botaoPadrao:active{
+    cursor:pointer;
+    transform: scale(0.85);
+}
+
+.navegacao{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: row;
+
+}
+.navegacao a {
+    font-weight: bold;
+    color: hsla(0, 0%, 0%, 0.35);
+    margin:0px 15px;
+    font-size:0.9em;
+    text-decoration: none;
+}
+.navegacao a:hover{
+    color: hsla(0,0%, 0%,1);
+    cursor:pointer;
+}
+.navegacao a:visited{
+    color: inherit;
+}
+
+.homeDiv{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+.homeDiv h1{
+    font-family: Georgia;
+    font-size: 4em;
+    font-weight:bolder;
+    width: 65%;
+    padding-left: 70px;
+}
+
+.homeLadoDireito{
+    width:35%;
+}
+
+.homeLadoDireito p{
+    font-size: 1em;
+    color: var(--letras-texto-claro);
+    margin-bottom: 30px;
+}
+
+.homeLadoDireito button{
+    background-color: black;
+    color: white;
+}
+
+.slidePrincipal{
+    display:flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+}
+
+.cartaoPrincipal{
+    background-size: cover;
+    height: 450px;
+    min-width:800px;
+    margin: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    transition: 0.2s;
+    scroll-snap-align: start;
+    user-select: none;
+}
+.cartaoPrincipal:hover{
+    cursor: pointer;
+}
+.cartaoPrincipal .info{
+    display: flex;
+    padding: 0px 10px;
+    justify-content: space-between;
+    padding: 30px;
+}
+.cartaoPrincipal .info p{
+    width: 60%;
+    color: var(--letras-em-cards);
+    font-family: Candara,Arial, Helvetica, sans-serif;
+}
+.botoes{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 30%;
+}
+
+.botoes button{
+    border-radius:50%;
+    font-size: 1.5em;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    border:none;
+    margin: 5px;
+    color: hsla(0, 100%, 100%, 0.4);
+    background-color: hsla(0, 0%, 50%, 0.4);
+}
+    
+.botoes button:hover{
+    color: hsla(0, 0%, 0%, 1);
+    background-color: hsla(0, 100%, 100%, 1);
+    cursor: pointer;
+}
+
+.abaConheca{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.abaConheca h3{
+    color: hsla(0, 0%, 0%, 0.35);
+    margin-bottom:0px;
+    font-weight: bolder;
+}
+
+.abaConheca h2{
+    font-family: Georgia;
+    font-size: 3em;
+    font-weight:bolder;
+    margin-bottom: 0px;
+}
+
+.slideConheca{
+    display: flex;
+    justify-content: Center;
+    width: 95%;
+    font-size: 0.8em;
+    color: var(--letras-em-cards);
+    font-family: Candara,Arial, Helvetica, sans-serif;
+}
+
+.slideConheca h3{
+    color:white;
+    font-size: 1.4em;
+}
+
+.esquerdoConheca{
+    width: 500px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    transition: 0.2s;
+}
+
+.direitoConheca{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.esquerdoConheca:hover,
+.subCartaoConheca:hover{
+    transform: scale(1.025);
+    cursor: pointer;
+}
+
+.subCartaoConheca{
+    margin: 5px;
+    width: 500px;
+    min-height: 195px;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+    transition: 0.2s;
+}
+
+.subCartaoConheca div{
+    padding: 20px
+}
+.subCartaoConheca img{
+    height: 100%; 
+    width: 200px;
+    background-size: cover;
+    background-position: -30px;
+}
+
+.abaNovidades{
+    background-color:  var(--cor-escura);
+    color: white;
+    padding: 40px;
+    font-family: Candara,Arial, Helvetica, sans-serif;
+    margin-bottom: 50px;
+}
+
+.novidadesTopo{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.abaNovidades h2{
+    font-size: 3em;
+    margin-bottom:20px;
+}
+.abaNovidades h3{
+    width: 60%;
+    font-size: 1em;
+    color: hsla(0, 100%, 100%, 0.4);
+    font-weight: normal;
+    margin-bottom:20px;
+}
+
+.cartoesNovidades{
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+}
+
+.cartoesNovidades .cartao{
+    min-width: 250px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    margin-right: 20px;
+    border:1px solid rgba(255, 255, 255, 0.178);
+    transition: 0.2s;
+    scroll-snap-align: start;
+}
+
+.cartoesNovidades .cartao:hover{
+    transform: scale(1.025);
+    cursor: pointer;
+}
+.cartoesNovidades .cartao .image{
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-color: transparent;
+}
+
+.cartoesNovidades .cartao h3{
+    width: 100%;
+    margin: 10px 0px;
+    font-size:1.3em;
+    color: white;
+}
+.cartoesNovidades .cartao p{
+    font-size: 0.8em;
+    color: hsla(0, 100%, 100%, 0.4);
+}
+
+.abaNossosServ{
+    padding:20px;
+    font-family: Candara,Arial, Helvetica, sans-serif;
+}
+
+.abaNossosServ h2{
+    font-size:3em;
+}
+
+.nossoServCard{
+    display: flex;
+    margin:40px 0px;
+    justify-content: baseline;
+}
+
+.nossoServCard .image{
+    width: 400px;
+    height: 250px;
+    background-size: cover;
+}
+
+.nossoServInfo{
+    width: 400px;
+    margin-left:20px;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+.nossoServInfo p{
+    color: var(--letras-texto-claro);
+}
+.nossoServCard h3{
+    font-size: 2em;
+    margin: 0px;
+}
+.nossoServCard button{
+    width:fit-content;
+}
+
+.abaContatos{
+    background-color: var(--cor-escura);
+    color: var(--letras-fundo-escuro);
+    padding:40px;
+}
+.abaContatos .topo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.abaContatos .topo h2{
+    color: white;
+    font-size: 3em;
+    width: 60%;
+}
+.abaContatos .topo div{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    padding: 20px;
+}
+.abaContatos .botaoPadrao{
+    width: fit-content;
+    color: white;
+    border: 1px solid white;
+    margin-top: 20px;
+}
+
+.baixo{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+    padding-bottom: 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.116);
+}
+#baixoInfo{
+    width: 30%;
+}
+.links{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+.links h4{
+    color: white;
+}
+.links h4, .links p{
+    margin:10px 0px;
+    cursor: pointer;
+    user-select: none;
+}
+.links p:hover{
+    color: white;
+}
+.links p:active{
+    transform:scale(0.9);
+    color:white;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    height: 50px;
+}
+
+
+.footer p{
+    font-size: 0.70em;
+}
+
+.footerImg{
+    width: 45%;
+    transform: translateY(10px);
+}
+
+.redesSociais{
+    display: flex;
+}
+.rede{
+    border: 1px dashed var(--letras-fundo-escuro);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 5px;
+}
+.rede:hover{
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.rede:active{
+    transform: scale(0.8);
+}
+
+/* Tamanho para Tablet */
+
+@media only screen and (max-width:768px){
+    body{
+        font-size: 0.9em;
+    }
+    .main{
+        max-width:768px;
+        min-width:500px;
+        
+    }
+    .header{
+        width: 100%;
+        justify-content: space-between;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .navegacao a{
+        margin: 10px;
+    }
+    .homeDiv h1{
+        font-size:3em;
+    }
+    .slidePrincipal{
+        overflow: hidden;
+    }
+    .cartaoPrincipal{
+        min-width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+    .subCartaoConheca{
+        width: 400px;
+    }
+    .esquerdoConheca{
+        width: 400px;
+    }
+}
+
+/* Tamanho para Mobile */
+
+@media only screen and (max-width:425px){
+    :root{
+        font-size: 0.75em;
+    }
+    
+    .main{
+        max-width: 425px;
+        min-width: 0px;
+        overflow: hidden;
+    }
+
+    .navegacao{
+        position: absolute;
+        display:flex;
+        top: 50px;
+        left: 0px;
+        width: 100%;
+        z-index: -1;
+        height: 20px;
+        background-color: white;
+    }
+    .header {
+        position: fixed;
+        top:0px;
+        left:0px;
+        background-color: white;
+        width: 100%;
+        height:75px;
+        z-index: 2;
+    }
+    .header img{
+        position:relative;
+        left: -10px;
+        top: -10px;
+        pointer-events: none;
+        transform: scale(0.75);
+    }
+    .header .botaoPadrao{
+        display:none;
+    }
+
+    #MobileMenu{
+        display: block;
+        position:relative;
+        right: 25px;
+        height:30px;
+        width:30px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        border-radius: 50%;
+        color: rgb(0, 0, 0);
+        background-color: transparent;
+    }
+
+    #MobileMenu:active{
+        transform: scale(0.9);
+    }
+
+    .homeDiv{
+        margin-top:80px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .homeDiv h1{
+        text-align: center;
+        padding:0px;
+        width: 100%;
+    }
+    .homeLadoDireito{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        
+    }
+    .homeLadoDireito p{
+        width: 100%;
+        margin: 10px;
+    }
+    .homeLadoDireito button{
+        font-size: 0.75em;
+        padding: 10px 15px;
+        width: fit-content;
+    }
+    .slidePrincipal{
+        overflow: hidden;
+    }
+    .cartaoPrincipal{
+        min-width: 100%;
+        padding: 0px;
+        margin: 0px;
+        height: 300px;
+    }
+    .info{
+        background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.863));
+        font-size: 0.9em;
+        align-items: end;
+        padding: 0px;
+    }
+
+    .info .botoes{
+        padding: 0px;
+        margin: 0px;
+        height: fit-content;
+        width: fit-content;
+    }
+    .botoes button{
+        min-width: unset;
+        padding: 0px;
+        margin: 0px 5px;
+        height: 30px;
+        width: 30px;
+    }
+    .abaConheca{
+        margin-top: 25px;
+        height: fit-content;
+    }
+
+    .abaConheca *{
+        margin: 0px;
+        padding:0px;
+    }
+
+    .abaConheca h3{
+        text-align: center;
+        font-size: 1.5em;
+        margin: 0px;
+    }
+    .abaConheca h2{
+        text-align: center;
+        font-size: 2em;
+        padding: 20px;
+    }
+
+    .slideConheca{
+        flex-direction: column;
+    }
+    .esquerdoConheca{
+        height: 250px;
+        width:100%;
+        margin-bottom: 10px;
+        background-size: cover;
+    }
+    .esquerdoConheca h3{
+        align-items: center;
+        text-align: start;
+    }
+    
+    .direitoConheca{
+        width:100%;
+    }
+    .subCartaoConheca *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .subCartaoConheca{
+        min-height: unset;
+        justify-content: space-between;
+        height: 100px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .subCartaoConheca div{
+        justify-content: center;
+        height: fit-content;
+        padding: 10px;
+    }
+    .subCartaoConheca img{
+        height: 100%;
+        width: 100px;
+    }
+    .subCartaoConheca h3{
+        margin-bottom: 5px;
+        text-align: start;
+    }
+
+    .cartoesNovidades .cartao{
+        min-width: 150px;
+        max-width: unset;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px;
+        margin-right: 20px;
+        border:1px solid rgba(255, 255, 255, 0.178);
+        transition: 0.2s;
+    }
+    .abaNossosServ h2{
+        margin-bottom: 0px;
+    }
+    .nossoServCard{
+        margin-top: 10px;
+        flex-direction: column;
+    }
+    .nossoServCard .image{
+        width: 100%;
+        height: 150px;
+    }
+
+    .nossoServInfo{
+        padding:0px;
+        margin: 0px;
+    }
+    .nossoServInfo p{
+        width: 70%;
+        margin-bottom: 10px;
+    }
+    .nossoServInfo button{
+        font-size: 1em;
+        padding:5px;
+    }
+
+    .topo{
+        flex-direction: column;
+    }
+    .topo h2{
+        min-width: 120%;
+        text-align: center;
+    }
+    .topo div{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        min-width: 100%;
+        height: 100%;
+        padding: 0px;
+    }
+    .topo p{
+        min-width: fit-content;
+        padding: 0px;
+        margin: 0px;
+    }
+    #MiniLogo{
+        width: 70px;
+        margin: 0px;
+        padding: 0px;
+        transform: translateX(-10px);
+    }
+    .baixo{
+        font-size:0.8em;
+        padding: 0px;
+        margin: 0px;
+        margin-bottom: 40px;
+    }
+    .abaContatos{
+        margin: 0px;
+    }
+    .baixo p{
+        margin-right: 20px;
+    }
+    .links{
+        padding: 0px;
+        margin: 10px;
+    }
+    .footer{
+        position:absolute;
+        margin: 0px;
+        left: 50%;
+        height: fit-content;
+    }
+    .footer p{
+        position: absolute;
+        bottom: -30px;
+        width: 220px;
+        left: -100px;
+    }
+    .footerImg{
+        position: absolute;
+        bottom: -40px;
+        transform: scale(0.75);
+        left: -130px;
+    }
+    .redesSociais{
+        position: absolute;
+        bottom: -15px;
+        left: 0px;
+        font-size: 1em;
+    }
+    .rede{
+        padding:0px;
+    }
+    .rede i{
+        transform: translateY(2px);
+    }
+
+}

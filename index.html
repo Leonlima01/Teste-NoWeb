@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste do NoWeb</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div id="Home" class="main">
+        <!-- Area de Navegação -->
+        <section class="header">
+            <img width="150" src="res/logotipo1.png" alt="Imagem da empresa">
+            <nav class="navegacao">
+                <a href="#Home">Home</a>
+                <a href="#Conheca">Quem somos</a>
+                <a href="#Servicos">Serviços</a>
+                <a href="#Novidades">Novidades</a>
+                <a href="#Contatos">Localização</a>
+            </nav>
+            <button class="botaoPadrao">Entre em contato</button>
+        </section>
+
+        <!-- Seção Home -->
+        <section class="homeDiv">
+            <h1>Nossa essência é <br> cuidar de você!</h1>
+            <div class="homeLadoDireito">
+                <p>Somos a Soul Brokers. Temos como propósito <br> prestar serviços e criar soluções de seguros <br> especificas para cada ramo de atuação.</p>
+                <button class="botaoPadrao">Conheça nossos serviços -></button>
+            </div>
+        </section>
+        <section id="slidePrincipal" class="slidePrincipal">
+            <div style="background-image: url('res/Cleaning-Cargo.jpg');"class="cartaoPrincipal">
+                <div class="info">
+                    <p>It was popularised in the 1960s with the release of Letraset <br> sheets containing Lorem Ipsum passages, and more recently <br> with desktop publishing software like Aldus PageMaker.</p>
+                    <div class="botoes">
+                        <button onclick="scrollEsquerdoPrincipal()"><</button>
+                        <button onclick="scrollDireitoPrincipal()">></button>
+                    </div>
+                </div>
+            </div>
+            <div style="background-image: url('res/Cargo2.png')"class="cartaoPrincipal">
+                <div class="info">
+                    <p>It was popularised in the 1960s with the release of Letraset <br> sheets containing Lorem Ipsum passages, and more recently <br> with desktop publishing software like Aldus PageMaker.</p>
+                    <div class="botoes">
+                        <button onclick="scrollEsquerdoPrincipal()"><</button>
+                        <button onclick="scrollDireitoPrincipal()">></button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Seção Conheça -->
+        <section id="Conheca"class="abaConheca">
+            <h3>Conheça</h3>
+            <h2>A tranquilidade que você precisa!</h2>
+            <div class="slideConheca">
+                <div style="background-image: url(res/industry.jpg);"class="esquerdoConheca">
+                    <div style="background-image: linear-gradient(rgba(255, 255, 255, 0.24),rgba(0, 0, 0, 0.534));padding: 20px;">
+                        <h3>Gestão de Transportes</h3>
+                        <p>It was popularised in the 1960s with the release of Letraset <br> sheets containing Lorem Ipsum passages, and more recently <br> with desktop publishing software like Aldus PageMaker.</p>
+                    </div>
+                </div>
+                <div class="direitoConheca">
+                    <div style="background-color: rgb(40, 100, 102);"class="subCartaoConheca">
+                        <img style="background-image: url(res/VolvoBlue.jpg)" alt="">
+                        <div>
+                            <h3>Acompanhamento de Frotas</h3>
+                            <p>It was popularised in the 1960s with the release of Letraset <br> sheets containing Lorem Ipsum passages, and more recently <br> with desktop publishing software like Aldus PageMaker.</p>
+                        </div>
+                    </div>
+                    <div style="background-color: rgb(18, 18, 61);" class="subCartaoConheca">
+                        <div>
+                            <h3>Segurança Empresarial</h3>
+                            <p>It was popularised in the 1960s with the release of Letraset <br> sheets containing Lorem Ipsum passages, and more recently <br> with desktop publishing software like Aldus PageMaker.</p>
+                        </div>
+                        <img style="background-image: url(res/image3.png)" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Seção Novidades -->
+        <section id="Novidades" class="abaNovidades">
+            <div class="novidadesTopo">
+                <h2>Novidades</h2>
+                <div class="botoes">
+                    <button onclick="scrollEsquerdo()"><</button>
+                    <button onclick="scrollDireito()">></button>
+                </div>
+            </div>
+            <h3>Mantenha-se atualizado sobre todas as novidades de tendências <br>do mercado, nossas matérias são cuidadosamente selecionadas para deixar você sempre atualizado.</h3>
+            <div id="cartoesNovidades" class="cartoesNovidades">
+                <div class="cartao">
+                    <div class="image" style="background-image: url(res/novidade1.PNG)"></div>
+                    <h3>Susep fornece novas dire...</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error mollitia quasi officiis quos excepturi temporibus deserunt reiciendis id quisquam odit.</p>
+                </div>
+                <div class="cartao">
+                    <div class="image" style="background-image: url(res/novidade2.PNG)"></div>
+                    <h3>Abril Verde: Segurança e...</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error mollitia quasi officiis quos excepturi temporibus deserunt reiciendis id quisquam odit.</p>
+                </div>
+                <div class="cartao">
+                    <div class="image" style="background-image: url(res/novidade3.PNG)"></div>
+                    <h3>A importância de medicin...</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error mollitia quasi officiis quos excepturi temporibus deserunt reiciendis id quisquam odit.</p>
+                </div>
+                <div class="cartao">
+                    <div class="image" style="background-image: url(res/novidade4.PNG)"></div>
+                    <h3>Como o mercado finan...</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error mollitia quasi officiis quos excepturi temporibus deserunt reiciendis id quisquam odit.</p>
+                </div>
+                <div class="cartao">
+                    <div class="image" style="background-image: url(res/novidade1.PNG)"></div>
+                    <h3>Susep fornece novas dire...</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error mollitia quasi officiis quos excepturi temporibus deserunt reiciendis id quisquam odit.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Seção Serviços -->
+        <section id="Servicos" class="abaNossosServ">
+            <h2>Nossos serviços</h2>
+            <div class="nossoServCard">
+                <div class="image" style="background-image: url(res/servico1.PNG)"></div>
+                <div class="nossoServInfo">
+                    <h3>Planos de Saúde</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet unde sint, voluptas ad temporibus totam omnis perspiciatis assumenda iusto laudantium a, ut modi iure! Aliquam quo nostrum, aut eum esse doloribus neque dolores. Deleniti maxime ea ut aperiam doloremque ab?</p>
+                    <button class="botaoPadrao">Conheça -></button>
+                </div>
+            </div>
+            <div class="nossoServCard">
+                <div class="image" style="background-image: url(res/servico2.PNG)"></div>
+                <div class="nossoServInfo">
+                    <h3>Seguro de Frota</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet unde sint, voluptas ad temporibus totam omnis perspiciatis assumenda iusto laudantium a, ut modi iure! Aliquam quo nostrum, aut eum esse doloribus neque dolores. Deleniti maxime ea ut aperiam doloremque ab?</p>
+                    <button class="botaoPadrao">Conheça -></button>
+                </div>
+            </div>
+            <div class="nossoServCard">
+                <div class="image" style="background-image: url(res/servico3.PNG)"></div>
+                <div class="nossoServInfo">
+                    <h3>Seguro Empresarial</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet unde sint, voluptas ad temporibus totam omnis perspiciatis assumenda iusto laudantium a, ut modi iure! Aliquam quo nostrum, aut eum esse doloribus neque dolores. Deleniti maxime ea ut aperiam doloremque ab?</p>
+                    <button class="botaoPadrao">Conheça -></button>
+                </div>
+            </div>
+        </section>
+        <!-- Seção Contatos -->
+        <section id="Contatos" class="abaContatos">
+            <div class="topo">
+                <h2>Venha tomar um <br> café conosco!</h2>
+                <div>
+                    <p>Somos a Soul Brokers. Temos como propósito prestar serviços e criar soluções de seguros especificas para cada ramo de atuação.</p>
+                    <button class="botaoPadrao">Entre em Contato -></button>
+                </div>
+            </div>
+            <img id="MiniLogo"width="150" src="res/logotipo2.png" alt="">
+            <div class="baixo">
+                <p id="baixoInfo">Nosso objetivo é atender às necessidades dos clientes com produtos de qualidade. Contamos com um time experiente para oferecer Proteção sob Medida.</p>
+                <div class="links">
+                    <div class="local">
+                        <h4>Localização</h4>
+                        <p>Praça Silvio Romero,<br>55 - Conjunto 34</p>
+                    </div>
+                    <div class="listaDeLink">
+                        <h4>Empresa</h4>
+                        <p>Sobre Nós</p>
+                        <p>Serviços</p>
+                        <p>Novidades</p>
+                        <p>Localização</p>
+                    </div>
+                    <div class="listaDeLink">
+                        <h4>Ajuda</h4>
+                        <p>Poiticas de Uso</p>
+                        <p>Privacidade</p>
+                        <p>Termos de uso</p>
+                        <p>FAQs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>2024 Copyright - Todos os Direitos Reservados - SoulBrokers</p>
+                <div class="footerImg">
+                    <img width="150" src="res/logotipo2.png" alt="">
+                </div>
+                <div class="redesSociais">
+                    <div class="rede">
+                        <i class="fa fa-whatsapp"></i>
+                    </div>
+                    <div class="rede">
+                        <i class="fa fa-instagram"></i>
+                    </div>
+                    <div class="rede">
+                        <i class="fa fa-facebook-f"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        function scrollEsquerdoPrincipal() {
+            const container = document.getElementById('slidePrincipal');
+            container.scrollBy({
+                top: 0,
+                left: -100, // Número de pixels a rolar horizontalmente para a esquerda
+                behavior: 'smooth' // Para uma rolagem suave
+            });
+        }
+
+        function scrollDireitoPrincipal() {
+            const container = document.getElementById('slidePrincipal');
+            container.scrollBy({
+                top: 0,
+                left: 100, // Número de pixels a rolar horizontalmente para a direita
+                behavior: 'smooth' // Para uma rolagem suave
+            });
+        }
+        function scrollEsquerdo() {
+            const container = document.getElementById('cartoesNovidades');
+            container.scrollBy({
+                top: 0,
+                left: -200, // Número de pixels a rolar horizontalmente para a esquerda
+                behavior: 'smooth' // Para uma rolagem suave
+            });
+        }
+
+        function scrollDireito() {
+            const container = document.getElementById('cartoesNovidades');
+            container.scrollBy({
+                top: 0,
+                left: 200, // Número de pixels a rolar horizontalmente para a direita
+                behavior: 'smooth' // Para uma rolagem suave
+            });
+        }
+    </script>
+</body>
+</html>
